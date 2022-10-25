@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload file to Gallery</title>
+</head>
+<body>
+    <h1>Upload new File</h1>
+    <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*" multiple>
+      <input type="submit">
+    </form>
+</body>
+</html>
