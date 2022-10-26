@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+{% block body %}
+    <header>
+        {% include 'header.html' %}
+    </header>
+    <div class="container-xxl">
+        <h1 style="text-align: center">Image</h1>
+        <div>
+            <img class="main-img" src="{{ url_for('send_image', filename=name) }}" id="current" alt="Upload some images in the gallery">
+        </div>
+        <br>
+
+        <div>
+            <a href="{{ url_for('delete', filename=name) }}" class="btn btn-danger">Delete</a>
+            <a href="{{ url_for('download_file', filename=name) }}" class="btn btn-success">Download</a>
+        </div>
+    </div>
+{% endblock %}

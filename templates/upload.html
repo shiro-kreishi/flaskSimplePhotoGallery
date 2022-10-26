@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Upload file to Gallery</title>
-    {% include 'head.html' %}
-</head>
-<body>
-    <h1>Upload new File</h1>
-    <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
-      <input type="file" name="file" accept="image/*" multiple>
-      <input type="submit">
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    Upload new File
+{% endblock %}
+{% block body %}
+   <header>
+   {% include 'header.html' %}
+   </header>
+    <div class="container-xxl">
+        <h1>Upload new File</h1>
+        <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+              <input type="file" name="file" accept="image/*" multiple class="form-control">
+              <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div>
+
+          <input type="submit">
+        </form>
+    </div>
+
+{% endblock %}

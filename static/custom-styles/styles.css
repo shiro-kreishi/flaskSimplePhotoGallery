@@ -1,0 +1,24 @@
+.main-img {
+  max-height: 800px;
+  height: 700px;
+  width: 994px;
+  object-fit: contain;
+  object-position: top 75%;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.imgs img {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+  height: 150px;
+  object-fit: cover;
+}

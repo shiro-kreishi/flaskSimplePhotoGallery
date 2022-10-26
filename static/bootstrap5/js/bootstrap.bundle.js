@@ -2023,7 +2023,7 @@
       if (!isHTMLElement(element) || !getNodeName(element)) {
         return;
       } // Flow doesn't support to extend this property, but it's the most
-      // effective way to apply styles to an HTMLElement
+      // effective way to apply custom-styles to an HTMLElement
       // $FlowFixMe[cannot-write]
 
 

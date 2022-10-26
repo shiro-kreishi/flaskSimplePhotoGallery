@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    {% include 'head.html' %}
-</head>
-<body>
-<div class="container-xxl">
-    <h1 style="text-align: center">Home Page</h1>
-</div>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+    Home page
+{% endblock %}
+{% block body %}
+    <header>
+        {% include 'header.html' %}
+    </header>
+    <div class="container-xxl">
+        <h1 style="text-align: center">Home page</h1>
+        <a class="image-container img-responsive">
+            <a href="{{ url_for('image', filename=uploads[0]) }}"><img class="main-img" src="{{ url_for('send_image', filename=uploads[0]) }}" id="current" alt="Upload some images in the gallery"></a>
+        </div>
+        <div class="imgs">
+            {% for image in uploads %}
+                <a href="{{ url_for('image', filename=image) }}"><img class="imgs" src="{{ url_for('send_image', filename=image) }}" /></a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
