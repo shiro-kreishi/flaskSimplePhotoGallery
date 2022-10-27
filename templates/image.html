@@ -3,6 +3,9 @@
 {% block title %}
     Gallery
 {% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom-styles/styles.css') }}">
+{% endblock %}
 {% block body %}
     <header>
         {% include 'header.html' %}

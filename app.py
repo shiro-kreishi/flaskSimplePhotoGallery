@@ -57,7 +57,7 @@ def download_file(filename):
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    return render_template('gallery.html', images=os.listdir('./uploads'))
 
 
 @app.route('/uploads/<filename>')
