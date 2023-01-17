@@ -6,6 +6,8 @@
 ```
 git clone git@github.com:shiro-av/flaskSimplePhotoGallery.git
 cd flaskSimplePhotoGallery
+python -n venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 mkdir uploads
 ```
